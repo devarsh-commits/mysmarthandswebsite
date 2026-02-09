@@ -76,7 +76,7 @@ nav {
 }
 
 .contactbox {
-    background: #ec1e21;
+    background:rgb(6, 6, 83);
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -128,9 +128,11 @@ nav a {
     /* border: 2px solid red; */
     background: #f7f3f4;
     color: white;
-    padding: 150px 2rem 100px;
+    /* padding: 150px 2rem 100px; */
     text-align: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero .info {
@@ -168,7 +170,7 @@ nav a {
 }
 
 .hero .banner1 img {
-    width: 78%;
+    width: 60%;
     object-fit: contain;
 
 }
@@ -241,13 +243,13 @@ nav a {
 }
 
 .feature-card h3 {
-    color: #ec1e21;
+    color:rgb(4, 4, 49);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
 .feature-card P {
-    color: rgb(4, 4, 49);
+    color: #ec1e21;
 }
 
 /* Courses Section */
@@ -281,7 +283,7 @@ nav a {
 }
 
 .course-header {
-    background: rgb(197, 38, 38);
+    background:rgb(6, 6, 83);
     color: white;
     padding: 2rem;
     text-align: center;
@@ -598,7 +600,7 @@ footer {
 
 .submit-btn {
     width: 100%;
-    background: #ec1e21;;
+    background: rgb(6, 6, 83);
     color: white;
     padding: 1rem;
     border: none;
@@ -721,12 +723,19 @@ footer {
     }
 
     .hero {
+        box-sizing: border-box;
         flex-direction: column;
         padding: 5PX;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
     }
 
     .hero h1 {
         font-size: 2rem;
+    }
+    .hero .info{
+        justify-content: center;
     }
 
     .mainbox2 {
