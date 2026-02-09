@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeakWell Academy - Transform Your Communication Skills</title>
+    <link rel="icon" type="image/png" href="Assets/logo2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Popup Modal -->
+    <div id="enquiryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Start Your Journey Today!</h2>
+            <p>Fill in your details and our team will contact you shortly</p>
+            <form id="enquiryForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Phone Number *" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <select id="course" required>
+                        <option value="">Select Course *</option>
+                        <option value="Public Speaking">Public Speaking Mastery</option>
+                        <option value="Personality Development">Personality Development</option>
+                        <option value="English Communication">English Communication</option>
+                        <option value="Corporate Training">Corporate Training</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Assets/logo.png" alt="">
+            </div>
+            <a href="tel:+919323222335" class="contactbox">Click To Call</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#affilations">Affiliations</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="info">
+            <h1>
+                <div style="font-weight: 600;">WELCOME TO </div>SPEAKWELL ENGLISH ACADEMY
+            </h1>
+            <h2>INDIA'S NO.1 SPOKEN ENGLISH CLASSES </h2>
+            <P>CALL US : +91 9323222335</P>
+            <button class="cta-button" onclick="openModal()">Enroll Now - Free Demo Class</button>
+        </div>
+        <div class="banner1"><img src="Assets/banner1.png" alt=""></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Why Choose SpeakWell Academy?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Expert Trainers</h3>
+                <p>Learn from industry professionals with years of experience in communication training and corporate
+                    training.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h3>Practical Approach</h3>
+                <p>Real-world scenarios and hands-on practice sessions to build confidence and fluency.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Proven Results</h3>
+                <p>Thousands of students have transformed their careers and confidence with our training programs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3>Certification</h3>
+                <p>Get certified upon completion and boost your resume with recognized credentials.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Personalized Support</h3>
+                <p>Individual attention and customized feedback to address your specific needs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⏰</div>
+                <h3>Flexible Timings</h3>
+                <p>Weekend and weekday batches available to suit your schedule.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="courses-container">
+            <h2 class="section-title">Our Popular Courses</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>Public Speaking Mastery</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul>
+                            <li>Overcome stage fear</li>
+                            <li>Voice modulation techniques</li>
+                            <li>Body language mastery</li>
+                            <li>Presentation skills</li>
+                            <li>Audience engagement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>Personality Development</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul>
+                            <li>Confidence building</li>
+                            <li>Leadership skills</li>
+                            <li>Emotional intelligence</li>
+                            <li>Professional etiquette</li>
+                            <li>Interview preparation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>English Communication</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul>
+                            <li>Grammar fundamentals</li>
+                            <li>Fluency development</li>
+                            <li>Business communication</li>
+                            <li>Email writing skills</li>
+                            <li>Accent neutralization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>Corporate Training</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul>
+                            <li>Team communication</li>
+                            <li>Meeting management</li>
+                            <li>Negotiation skills</li>
+                            <li>Client interactions</li>
+                            <li>Professional networking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affilations section -->
+    <div class="afcontainer" id="affilations">
+        <h2 class="section-title1">Our Affilations</h2>
+        <div class="mainbox1" id="logoSlider">
+            <div class="box">
+                <img src="Assets/Skill.png" alt="NSDC">
+            </div>
+            <div class="box">
+                <img src="Assets/mepsclogo.png" alt="MEPSC">
+            </div>
+            <div class="box">
+                <img src="Assets/nieltLOGO.png" alt="NIELIT">
+            </div>
+            <div class="box">
+                <img src="Assets/tssc.png" alt="Telecom Sector Skill Council">
+            </div>
+        </div>
+        <div class="mainbox2">
+            <div class="box1">
+                <div class="number" id="rating">0.0</div>
+                <div class="stars">★ ★ ★ ★ ★</div>
+                <div class="description">10k+ Ratings Across Centers Google Reviews</div>
+            </div>
+
+            <div class="box1">
+                <div class="number">
+                    <span id="satisfaction">0</span><span class="percent">%</span>
+                </div>
+                <div class="stars">★ ★ ★ ★ ★</div>
+                <div class="description">Student Satisfaction Inhouse Survey</div>
+            </div>
+        </div>
+    </div>
+    <!-- affilations section  -->
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Our Students Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">SpeakWell Academy transformed my career! I was terrified of public speaking,
+                    but now I confidently present to clients and colleagues.</p>
+                <p class="testimonial-author">- Priya Sharma, IT Professional</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">The personality development course boosted my confidence tremendously. I
+                    cracked my dream job interview thanks to the training!</p>
+                <p class="testimonial-author">- Rahul Verma, MBA Graduate</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">Excellent trainers and practical approach. My English communication skills
+                    improved significantly in just 3 months.</p>
+                <p class="testimonial-author">- Anjali Patel, HR Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title" style="color: white;">Our Branches</h2>
+        <div class="myslider">
+            <div class="slider-track">
+                <div class="contact-cards">
+                    <div class="contactinfo">
+                        <div class="contact-item1">Kharghar</div>
+                        <div class="contact-item2">📞 Phone: +91 9323222335</div>
+                        <div class="contact-item3">
+                            📍 Location: 110, Havare Tiarra Complex, above Daily Bazar,
+                            Sector 13, Kharghar, Navi Mumbai, Maharashtra 410210, India
+                        </div>
+                        <div class="map">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Speakwell%20Kharghar%20110%2C%20Havare%20Tiarra%20Complex%2C%20Sector%2013%2C%20Kharghar%2C%20Navi%20Mumbai">
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contactinfo">
+                        <div class="contact-item1">Kamothe</div>
+                        <div class="contact-item2">📞 Phone: +91 9323222335</div>
+                        <div class="contact-item3">
+                            📍 Location: Shop No. 4, Plot 51, Prem Angan CHS,
+                            near Aishwarya Hotel, Sector 10, Kamothe,
+                            Panvel, Navi Mumbai, Maharashtra 410209
+                        </div>
+                        <div class="map">
+                            <a
+                                href="https://www.google.com/maps/place/Speakwell+Kamothe.+India's+no.+1+English+Spoken+Classes/@19.0178224,73.0956488,17z">
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contactinfo">
+                        <div class="contact-item1">Taloja</div>
+                        <div class="contact-item2">📞 Phone: +91 9323222335</div>
+                        <div class="contact-item3">
+                            📍 Location: 14, Shelter Riverside CHS,
+                            Taloja Phase 1 Road, Sector 14,
+                            Taloja, Navi Mumbai, Maharashtra 410208, India
+                        </div>
+                        <div class="map">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Speakwell%20Taloja%20Sector%2014%20Navi%20Mumbai">
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contactinfo">
+                        <div class="contact-item1">Kalamboli</div>
+                        <div class="contact-item2">📞 Phone: +91 9323222335</div>
+                        <div class="contact-item3">
+                            📍 Location: F/8, 1st Floor, Amrante Neel Siddhi Shopping Complex,
+                            Sector 9, Next to Dmart,
+                            Kalamboli, Navi Mumbai - 410218
+                        </div>
+                        <div class="map">
+                            <a
+                                href="https://www.google.com/maps/place/Speakwell+Kalamboli,+India's+no.+1+English+Spoken+Classes/@19.038351,73.0998975,17z">
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="cta-button" onclick="openModal()" style="margin-top: 2rem;">Book Your Free Demo Class</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SpeakWell Academy. All Rights Reserved.</p>
+        <p>Empowering individuals through effective communication</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
