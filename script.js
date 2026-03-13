@@ -4,7 +4,7 @@
 
 // Replace with your business WhatsApp number (with country code, no + or spaces)
 // Example: For +91 9876543210, use: 919876543210
-const BUSINESS_WHATSAPP_NUMBER = "919323222335";
+const BUSINESS_WHATSAPP_NUMBER = "919930565730";
 
 // ============================================
 // POPUP MODAL FUNCTIONS
