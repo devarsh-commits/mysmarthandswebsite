@@ -848,4 +848,18 @@ footer {
     .stars {
         letter-spacing: 2px;
     }
+     .testimonial-card {
+        min-width: 280px;
+        max-width: 280px;
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+
+    .quote-icon {
+        font-size: 50px;
+    }
+
+    .testimonial-text {
+        font-size: 15px;
+    }
 }

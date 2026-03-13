@@ -20,6 +20,7 @@ window.addEventListener('load', function () {
         animateNumber('satisfaction', 98, 2000, false);
     }, 200);
     setupSlider();
+    setupTestimonialSlider() ;
     // Run on resize
 let resizeTimer;
 window.addEventListener('resize', () => {
@@ -85,6 +86,46 @@ function setupSlider() {
 
             slider.innerHTML = '';
             boxes.forEach(box => slider.appendChild(box));
+        }
+    }
+}
+function setupTestimonialSlider() {
+    const slider = document.getElementById('TestimonalSlider');
+    const grid = slider.querySelector('.testimonial-grid');
+    
+    // Only apply slider on mobile
+    if (window.innerWidth <= 768) {
+        // Check if already converted to slider
+        if (!grid.querySelector('.slider-track')) {
+            // Get all testimonial cards
+            const cards = Array.from(grid.querySelectorAll('.testimonial-card'));
+            
+            // Create slider track
+            const track = document.createElement('div');
+            track.className = 'slider-track';
+            
+            // Add original cards
+            cards.forEach(card => {
+                track.appendChild(card.cloneNode(true));
+            });
+            
+            // Duplicate cards for seamless loop
+            cards.forEach(card => {
+                track.appendChild(card.cloneNode(true));
+            });
+            
+            // Clear grid and add track
+            grid.innerHTML = '';
+            grid.appendChild(track);
+        }
+    } else {
+        // Desktop: restore grid layout
+        if (grid.querySelector('.slider-track')) {
+            const track = grid.querySelector('.slider-track');
+            const cards = Array.from(track.querySelectorAll('.testimonial-card')).slice(0, 3);
+            
+            grid.innerHTML = '';
+            cards.forEach(card => grid.appendChild(card));
         }
     }
 }
@@ -208,7 +249,7 @@ document.getElementById('enquiryForm').addEventListener('submit', function (even
 function sendToWhatsApp(name, phone, course) {
     // Create formatted message
     const message = `
- *New Enquiry - SpeakWell Academy*
+ *New Enquiry - My Smart Hands Academy*
 
 *Name:* ${name}
 *Phone:* ${phone}
